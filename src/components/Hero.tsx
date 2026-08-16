@@ -1,9 +1,9 @@
 import photoSrc from "../assets/images/dagmawit.jpg";
 
 const socialLinks = [
-  { label: "GitHub", href: "" },
-  { label: "Instagram", href: "" },
-  { label: "Telegram", href: "" },
+  { label: "GitHub", href: "https://github.com/Dagmawit43" },
+  { label: "Instagram", href: "https://instagram.com/_dagmawit43" },
+  { label: "Telegram", href: "https://t.me/dagmawit_43" },
 ];
 
 function SocialIcon({ label }: { label: string }) {
@@ -58,6 +58,9 @@ export default function Hero() {
             >
               dagmawitgebreweld43@gmail.com
             </a>
+            <a href="tel:+251936502560" className="brand-email brand-phone">
+              +251 936 502560
+            </a>
           </div>
 
           <div className="brand-meta">
@@ -65,14 +68,11 @@ export default function Hero() {
               {socialLinks.map((link) => (
                 <a
                   key={link.label}
-                  href={link.href || undefined}
+                  href={link.href}
                   className="social-link"
                   aria-label={link.label}
-                  onClick={(event) => {
-                    if (!link.href) {
-                      event.preventDefault();
-                    }
-                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <SocialIcon label={link.label} />
                   <span>{link.label}</span>
@@ -83,7 +83,10 @@ export default function Hero() {
             <div className="brand-copy">© 2026, All Rights Reserved</div>
           </div>
 
-          <a href="#contact" className="cta-primary hero-cta">
+          <a
+            href="mailto:dagmawitgebreweld43@gmail.com"
+            className="cta-primary hero-cta"
+          >
             WORK WITH ME <span aria-hidden="true">→</span>
           </a>
         </aside>
@@ -110,6 +113,9 @@ export default function Hero() {
               I&apos;m a Software Engineer passionate about building modern,
               user-focused web and mobile applications. I enjoy turning ideas
               and complex problems into clean, practical digital experiences.
+            </p>
+            <p className="hero-education">
+              Graduate of Addis Ababa Science and Technology University (AASTU)
             </p>
           </aside>
         </div>

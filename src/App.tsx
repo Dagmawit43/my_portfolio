@@ -1,5 +1,4 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import AboutPage from "./pages/AboutPage";
 import ExperiencePage from "./pages/ExperiencePage";
 import Home from "./pages/Home";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
@@ -15,7 +14,6 @@ export default function App() {
         <Route path="/projects/:slug" element={<ProjectDetailPage />} />
         <Route path="/skills" element={<SkillsPage />} />
         <Route path="/experience" element={<ExperiencePage />} />
-        <Route path="/about" element={<AboutPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </main>

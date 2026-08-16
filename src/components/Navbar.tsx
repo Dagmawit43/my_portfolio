@@ -5,7 +5,6 @@ const navItems = [
   { label: "Projects", path: "/projects" },
   { label: "Skills", path: "/skills" },
   { label: "Experience", path: "/experience" },
-  { label: "About", path: "/about" },
 ];
 
 export default function Navbar() {
