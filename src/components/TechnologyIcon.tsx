@@ -49,12 +49,17 @@ const ICONS: Record<string, React.ComponentType<any>> = {
   GitHub: SiGithub,
   "VS Code": SiVisualstudiocode,
   Arduino: SiArduino,
+  "Arduino Uno": SiArduino,
   "Application Testing": RiShieldCheckLine,
   "REST APIs": RiShieldCheckLine,
   "JWT Authentication": RiShieldCheckLine,
   "Human-Computer Interaction (HCI)": SiFigma,
   Vercel: SiVercel,
 };
+
+export function hasTechnologyIcon(name: string) {
+  return Boolean(ICONS[name] ?? ICONS[name.replace(/\s+\(.+\)/, "")]);
+}
 
 export default function TechnologyIcon({
   name,
@@ -67,7 +72,7 @@ export default function TechnologyIcon({
 }) {
   const Icon = ICONS[name] ?? ICONS[name.replace(/\s+\(.+\)/, "")];
 
-  if (!Icon) return <div className={`tech-logo-missing ${className}`} />;
+  if (!Icon) return null;
 
   return <Icon className={className} size={size} />;
 }

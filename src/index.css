@@ -97,8 +97,17 @@ img {
     @apply mb-5 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate-300;
   }
 
+  .brand-logo {
+    display: block;
+    width: min(100%, 230px);
+    height: auto;
+    margin: 0 0 0.9rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
   .brand-name {
-    @apply text-[1.8rem] font-semibold leading-[1.05] text-white sm:text-[2.2rem];
+    @apply text-[1.05rem] font-semibold leading-[1.25] text-white sm:text-[1.15rem];
   }
 
   .brand-email {
@@ -619,7 +628,11 @@ img {
     }
 
     .brand-name {
-      @apply text-[1.5rem];
+      @apply text-[1rem];
+    }
+
+    .brand-logo {
+      width: min(100%, 180px);
     }
 
     .hero-background {
@@ -1042,6 +1055,44 @@ img {
     line-height: 1.5;
   }
 
+  .experience-card__layout--media {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(180px, 0.85fr);
+    gap: 1.25rem;
+    align-items: start;
+  }
+
+  .experience-role-sub {
+    margin: 0.45rem 0 0;
+    color: rgba(226, 232, 240, 0.78);
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+  }
+
+  .experience-media {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(15, 23, 42, 0.55);
+    min-height: 180px;
+  }
+
+  .experience-media__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .experience-tech--text {
+    padding-left: 0.7rem;
+  }
+
   .experience-role {
     margin: 0;
     font-size: clamp(1.35rem, 2vw, 1.85rem);
@@ -1139,6 +1190,16 @@ img {
     letter-spacing: 0.06em;
   }
 
+  @media (max-width: 900px) {
+    .experience-card__layout--media {
+      grid-template-columns: 1fr;
+    }
+
+    .experience-media__img {
+      max-height: 240px;
+    }
+  }
+
   @media (max-width: 640px) {
     .experience-title {
       font-size: clamp(2.4rem, 14vw, 3.4rem);
@@ -1168,6 +1229,10 @@ img {
 
     .experience-item--featured .experience-role {
       font-size: clamp(1.45rem, 7vw, 1.9rem);
+    }
+
+    .experience-media__img {
+      max-height: 200px;
     }
   }
 }

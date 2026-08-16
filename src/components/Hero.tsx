@@ -1,4 +1,5 @@
 import photoSrc from "../assets/images/dagmawit.jpg";
+import brandSrc from "../assets/images/db3.jpg";
 
 const socialLinks = [
   { label: "GitHub", href: "https://github.com/Dagmawit43" },
@@ -51,6 +52,11 @@ export default function Hero() {
         <aside className="brand-panel">
           <div>
             <div className="brand-label">My brand</div>
+            <img
+              src={brandSrc}
+              alt="Dagmawit Gebreweld brand"
+              className="brand-logo"
+            />
             <h2 className="brand-name">Dagmawit Gebreweld Demses</h2>
             <a
               href="mailto:dagmawitgebreweld43@gmail.com"
